@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tools &amp; Extensions</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e6c93 0%, #154f6e 100%);
+      color: #fff;
+      text-align: center;
+      padding: 48px 24px 36px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1e6c93;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d0e6f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title svg {
+      width: 22px;
+      height: 22px;
+      fill: #1e6c93;
+    }
+
+    section { margin-bottom: 44px; }
+
+    /* ── Grid of cards ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+      transform: translateY(-2px);
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .card-icon-placeholder {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      background: #e8f4fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .card-icon-placeholder svg {
+      width: 28px;
+      height: 28px;
+      fill: #1e6c93;
+    }
+
+    .card-body { flex: 1; min-width: 0; }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4285f4;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #3367d6; }
+    .btn-green { background: #1e7e34; }
+    .btn-green:hover { background: #155d27; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.82rem;
+      color: #999;
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.6rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Tools &amp; Extensions</h1>
+  <p>Quick access to all my web tools and Chrome extensions</p>
+</header>
+
+<main>
+
+  <!-- ── Web Tools ── -->
+  <section>
+    <div class="section-title">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93V18c0-.55.45-1 1-1s1 .45 1 1v1.93c-3.95-.49-7-3.85-7.93-7.93H7c.55 0 1 .45 1 1s-.45 1-1 1H4.07C4.56 17.08 7.92 20.44 11 20.93zM4.07 11H6c.55 0 1-.45 1-1s-.45-1-1-1H4.07C4.56 6.92 7.92 3.56 11 3.07V5c0 .55-.45 1-1 1s-1-.45-1-1V3.07c-3.95.49-7 3.85-7.93 7.93zM13 3.07V5c0 .55.45 1 1 1s1-.45 1-1V3.07c3.08.49 6.44 3.85 6.93 7.93H20c-.55 0-1 .45-1 1s.45 1 1 1h1.93C20.44 17.08 17.08 20.44 13 20.93V19c0-.55.45-1 1-1s1 .45 1 1v1.93c3.95-.49 7-3.85 7.93-7.93H21c-.55 0-1-.45-1-1s.45-1 1-1h1.93C21.44 6.92 18.08 3.56 13 3.07z"/></svg>
+      Web Tools
+    </div>
+    <div class="card-grid">
+
+      <a class="card" href="https://techvalleyapps.github.io/FileShare/" target="_blank" rel="noopener noreferrer">
+        <div class="card-icon-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">File Share</div>
+          <span class="btn btn-green">Open Tool</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://techvalleyapps.github.io/LaptopTester/" target="_blank" rel="noopener noreferrer">
+        <div class="card-icon-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Laptop Tester</div>
+          <span class="btn btn-green">Open Tool</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── Chrome Extensions ── -->
+  <section>
+    <div class="section-title">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      Chrome Extensions
+    </div>
+    <div class="card-grid">
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/PWxruVIr6b-LEXq9VDAz4IU9RH6_vPV1Wm_EMNzJKgUDseM8fLYy0T85A3NwgbKKK8T7co6nML53xfU0-iBLceW1Pg=s60" alt="URL Copier" />
+        <div class="card-body">
+          <div class="card-title">URL Copier</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/url-copier/bnjmnmgieckpkgcdbecooagihdgpapio" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/mdJsvW-SL9Crb9xwn_OFi9O5qiQnmiNe-sbdlmirCF3apvQpK95nQLkj74Bm7_VT43O3rs6KmvgNv1KlUCsV15zIEbg=s60" alt="Shopify to Royal Mail" />
+        <div class="card-body">
+          <div class="card-title">Shopify to Royal Mail</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/shopify-to-royal-mail-ord/poepbfgcofmmmabmjclalkkegdhegnho" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/K4JcTZdXhWH_D0V_zLNgtQIsXCPGNI2ocjNsoGNba1hVrlwtObpbW4J7M-K30D2NUtTIwBfsi0Ov-2FmLVhKiBMm=s60" alt="Email Sender" />
+        <div class="card-body">
+          <div class="card-title">Email Sender</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/mailchimp-email-scheduler/bgmkjkpkcfjoidmgmdepkdgdmfjakpjf" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/ZBVW9Z7WO-fWiVT29tbf6Ku3g3Roq3Ty2jw8i5G25QnXtV7t0B1Dh6T2BkwSXmPxtJ6pjlOw_0FieL4cT7eW_Sxmjw=s60" alt="Payment Helper" />
+        <div class="card-body">
+          <div class="card-title">Payment Helper</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/payment-helper/iojaomjlapebobidohinhdahcgghokad" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/oSUns_8DDJrGZSYBDmTTkCWhEhyL6p8XY0CbHhR9hyjO1Ko5EtDUvMYPm3ycaPuI1IQ8P-1bWdv4_BOk6mNz-oFAEA=s60" alt="Price Tracker Pro" />
+        <div class="card-body">
+          <div class="card-title">Price Tracker Pro</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/price-tracker-pro/kpgidbliagapgjaifjgaofipmalpbnjo" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/bR_LRbutlZ928PqAdcZkFDHGM8DbdY3pCOxb_lPkeGmoilfDRZzqZQwyxwv9IpRVtvlUin8Ijq9VnvlvMsf6Nt-TQA=s60" alt="Clipboard Sync" />
+        <div class="card-body">
+          <div class="card-title">Clipboard Sync</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/clipboard-sync/idahlbpoggpphmbdcihlcehjdjflbcom" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/Wvt5ejt3BVRET_s9AMTCm0FaeItDBEP-Hzk7ZuRXzRX4NeP6yPRIE6RSuAeJETuw2J8SnZ8QLMyASAwp9mH53_LMfw=s60" alt="HR Management System" />
+        <div class="card-body">
+          <div class="card-title">HR Management System</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/hjghgklgehgbgcmbgodnbkdmbjgiibgf" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-icon" src="https://lh3.googleusercontent.com/dAr0Ck4hx9YIMY5BkNUUqmhZ5qbQNphGPvlFWdN__suVxWPv002yABRRh-aCJq0u1y7jPgPSX8ToQOM83ta6k-bz=s60" alt="Magento Description Updater" />
+        <div class="card-body">
+          <div class="card-title">Magento Description Updater</div>
+          <a class="btn" href="https://chromewebstore.google.com/detail/gdpdhdpnodekeoajhpfidbplcopflmkl" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Tech Valley Apps &mdash; All tools in one place
+</footer>
+
+</body>
+</html>
